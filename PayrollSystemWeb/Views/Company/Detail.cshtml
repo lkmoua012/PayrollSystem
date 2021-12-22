@@ -1,0 +1,26 @@
+﻿@model PayrollWeb.Models.CompanyDetailViewModel
+@{
+    ViewData["Title"] = "Company Details";
+}
+<hr/>
+<form asp-controller="Company" asp-action="SaveDetail" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label asp-for="TaxId"></label>
+        <input asp-for="TaxId" class="form-control" />
+        <span asp-validation-for="TaxId"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="StreetAddress"></label>
+        <input asp-for="StreetAddress" class="form-control" />
+        <span asp-validation-for="StreetAddress"></span>
+
+    </div>
+    <input type="submit" class="btn btn-primary" />
+</form>
